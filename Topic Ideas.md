@@ -28,5 +28,7 @@ Proposed workflow:
 8. Creating a basket database to generate the report from
 9. Using magic to conjure an AI to spit a readable Report.
 
+Draft: https://www.figma.com/file/8SL6INM9ii2y4Y5ahnlS0j/Cloudscape-Design-System-(Community)?node-id=48155%3A228641
+
 Plan B:
 If it is not possible to conjure the AI, I would then tweak the project to allow any kind of tool to be run on the files. Possibly even have a marketplace for people to develop toolsets and make money of off them. 
