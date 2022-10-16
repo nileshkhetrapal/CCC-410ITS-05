@@ -1,0 +1,884 @@
+2022-10-21
+MFTECmd: Nuget, add new extended attribute
+
+2022-08-05
+RECmd: Remove -q as it did nothing, nuget
+RBCmd: Update JSON and CSV to be consistent in descriptions, nuget
+
+2022-07-16
+rla: with -f, create out directory if it does not exist vs exploding
+
+2022-07-06
+AmcacheParser: Nuget updates
+
+2022-06-22
+MFTECmd: Add --dr switch to dump resident files to subdirectory of --csv
+
+2022-06-15
+LECmd, JLECmd, RBCmd, RecentFileCacheParser: Use UTC datetime in CSV output filename vs local time, nuget
+
+2022-06-02
+RECmd, rla: Fix for extracting embedded filenames on non-Windows platforms, nuget
+XWFIM: Fix issues with two versions existing at same time (different SR levels)
+
+2022-05-27
+LECmd: Nuget dependency updates (fix for Beef004 extension block)
+
+2022-05-20
+bstrings: Fix extra text in help text for --sl
+
+2022-04-15
+EZViewer: Fix issue with hex viewer context menus
+
+2022-03-10
+MFTECmd: $I30 tweaks for empty index pages
+
+2022-03-02
+MFTECmd: Add $I30 support, including slack entry extraction, extract slack index entries from FILE records
+
+2022-02-20
+SBECmd: Match on LAST username in filename, not first
+
+2022-02-19
+AmcacheParser: Resolve absolute path when not provided, nuget
+
+2022-02-16
+TLE: Add CTRL+SHIFT+F to auto apply selected cell text as column filter, tweaked plugins
+
+2022-02-11
+RE, RECmd, RLA: Nuget and plugin updates
+
+2022-02-08
+SBECmd: Tweak how csvs are generated, extract out user profile name vs the entire path to hive in filename, ensure files do not get overwritten when they exist in --csv
+
+2022-02-06
+SrumECmd: Add info on unknown tables, nuget, remove more nlog refs
+
+2022-02-03
+TLE: Add Reopen last closed tab (CTRL+SHIFT+T) to reopen last closed file
+
+2022-01-29
+RECmd: give .net6 version its own subfolder
+TLE: Add psort format plugin
+
+2022-01-28
+MFTECmd: All new output for --de mode
+
+2022-01-25
+MFTExplorer: net 6 build, nuget
+SDBExplorer: net 6 build, nuget
+JumpListExplorer: net 6 build, nuget
+EZViewer: net 6 build, nuget
+
+2022-01-24
+RLA: Split out from Registry Explorer, net 6 build, switch to serilog vs nlog
+RECmd: Split out from Registry Explorer, net 6 build, switch to serilog vs nlog
+Registry Explorer: net 6 build, nuget, updated bookmarks, plugins, etc.
+SBECmd: Split out from Shellbags Explorer
+Shellbags Explorer: net 6 build, nuget, switch to serilog vs nlog
+Timeline Explorer: net 6 build, nuget, switch to serilog vs nlog
+Hasher: nuget, control updates
+
+2022-01-22
+iisGeolocate: nuget, add net 6 build, switch to serilog vs nlog, update geo database
+AmCacheParser: nuget, add net 6 build, switch to serilog vs nlog
+JLECmd: nuget, add net 6 build, switch to serilog vs nlog
+EvtxECmd: nuget, add net 6 build, switch to serilog vs nlog
+SqlECmd: nuget, switch to serilog vs nlog
+WxTCmd: nuget, switch to serilog vs nlog
+Get-ZimmermanTools: Ignore All_6.zip
+
+2022-01-21
+SumECmd: nuget, add net 6 build, switch to serilog vs nlog
+AppCompatCacheParser: nuget, add net 6 build, switch to serilog vs nlog
+bstrings: nuget, add net 6 build, switch to serilog vs nlog
+VSCMount: nuget, add net 6 build, switch to serilog vs nlog
+RBCmd: nuget, add net 6 build, switch to serilog vs nlog
+RecentFileCache: nuget, add net 6 build, switch to serilog vs nlog
+
+2022-01-20
+Get-ZimmermanTools: Added -NetVersion switch to control what to get. Use -NetVersion to control which flavor of tool you get: 4 for net 4.6.2 and 6 for net 6 (recommended!). If not specified, you get both!!!!!1
+SrumECmd: nuget, add net 6 build, switch to serilog vs nlog
+MFTECmd: nuget, add net 6 build, switch to serilog vs nlog
+
+2022-01-02
+TLE: Fix expected header in SBECmd plugin so the CSV is detected as SBE vs generic CSV
+
+2021-10-15
+TLE: Enable sweet sweet rounded corners on Windows 11
+
+2021-10-08
+SDBExplorer,SrumECmd,SumECmd,ShellBagsExplorer,Hasher,MFTExplorer,JLECmd,JumpListExplorer,TimelineExplorer,RegistryExplorer,XWFIM,EZViewer,LECmd: nuget/control updates
+
+2021-10-07
+MFTECmd: More better reparse point support, some new EAs involving linux
+
+2021-10-01
+MFTECmd: Fix for --blf due to CSVHelper refactoring
+
+2021-09-28
+MFTECmd: Add -m switch to resolve parent directories when -f points to a $J file
+TLE: Add support for ParentPath in $J, better handling of local changes to layouts (your customizations are NOT lost on updates anymore)
+
+2021-09-27
+MFTECmd: Resolve deleted paths from orphaned extension records
+
+2021-09-21
+All Registry based tools: update parser with significant speed improvements when lots of deleted items are present
+
+2021-09-09
+Registry Explorer: New plugins
+
+2021-09-03
+MFTECmd: Add check for invalid dates in IndexEntry
+
+2021-08-08
+TLE: Fix CTRL-T for generic files
+bstrings: add --ms switch for max size. nuget
+
+2021-07-23
+XWFIM: Add Tesseract
+
+2021-07-21
+SBE: Fix CSV Export having 'height' columns when exporting CSV from GUI
+TLE: Update EZTools plugin for SBE fix
+
+2021-07-13
+RECmd: Add 'ROOT' alias, to always find the root of the hive, regardless of name. In some hives, ROOT is the key name, but in others, it is not known without using Registry Explorer or similar. Using --kn ROOT gets around this and will always return the root of the hive (and display the actual name)
+
+2021-07-07
+EvtxECmd: Nuget updates, verify directory exists and exit if not with -d
+
+2021-07-01
+TLE: Add Nirsoft BrowsingHistoryView CSV support
+
+2021-06-24
+Registry Explorer: Add syncing of bookmarks with Github via Bookmarks menu
+
+2021-06-15
+AmcacheParser, AppCompatCacheParser: Make binary smaller
+
+2021-06-09
+TLE: Add option (on by default) for multiline tabs vs a single row of tabs that goes out to the right. Setting is remembered
+LECmd: Update nuget, update lnk parser
+
+2021-06-08
+RECmd: Tweaks for overlong paths in --csv when writing plugin output in -f mode (vs -d mode).
+
+2021-06-04
+RECmd: Tweaks for overlong paths in --csv when writing plugin output. This version replaces the base path (-d) in the output filename, making the plugin output names MUCH shorter when -d is very lengthy to begin with
+
+2021-05-28
+Registry Explorer/RECmd: Tweaks for determining plugins using regex vs * glob patterns, improved RECmd batch mode functionality
+
+2021-05-27
+WxTCmd: Fix issue with StartTime in ActivityOperations output
+
+2021-05-26
+ALl GUIs: Nuget and third party controls updates
+
+2021-05-24
+All Registry related tools: Update to latest Registry nuget package containing improvements for processing hives with empty pages. This also greatly improves parsing hives extracted from memory. Thanks to Martin Willing for the sample hive!
+
+2021-05-06
+SrumECmd: AnyCPU vs x86
+
+2021-04-16
+TLE: Handle situation where a file has only a header and no data. In this case, the file will not be loaded and a warning message is shown in the Messages window
+Registry Explorer: Update to .net 4.7.2 as required version (included in Windows 10 since 1809)
+Shellbags Explorer Explorer: Update to .net 4.7.2 as required version (included in Windows 10 since 1809)
+All Gui Apps: Add License.txt file (MIT)
+
+2021-04-15
+Registry Explorer: Add LastWriteTimestamp to WordWheelQuery plugin
+RECmd: nuget, add search hit summary at end of run
+
+2021-04-14
+TLE: Add support for double clicking a TLE session file and having it load
+
+2021-04-12
+LECmd: Handle corrupt data in shell item (0x31)
+
+2021-04-08
+Timeline Explorer: Nuget updates, add support for SumECmd CSV output, add shortcuts for expand/collapse groups to Tools (and keyboard shortcut)
+
+2021-04-05
+EvtxECmd: Tweak internal regex to preserve nested data better
+
+2021-03-20
+(Many programs): Embed pdb info to ease fixing any issues found, nuget and control updates
+
+2021-03-18
+iisGeolocate: tweaks for handling multi-gig logs, other improvements
+
+2021-03-17
+iisGeolocate: total rewrite
+
+2021-03-12
+MFTECmd: Fix output with symlink reparse points where the name was slightly off
+
+2021-03-11
+SBECmd: Fix issue dumpming parameters when none were supplied
+
+2021-03-09
+TLE: Add support for CTRL-F'ing generic CSV files
+
+2021-03-08
+SQLECmd: Include name of database in CSV files, prevent 0 byte files from being created (i.e. when no data was found that matches a query), updated maps
+WxTCmd: Include profile name where database was found in CSV names, when present. nuget updates
+TLE: Add support for KAPE Minitimeline output csv, add line and tag columns to generic CSV plugin
+
+2021-03-01
+LECmd: Remove BOM from CSV
+
+2021-02-23
+LECmd: Resolve relative paths to absolute path, nuget updates
+JLECmd: Resolve relative paths to absolute path, nuget updates
+
+2021-02-22
+SQLECmd: updated maps, handle file in use errors in hunt mode
+
+2021-02-19
+RECmd: For Batch mode, put all plugin csv files into a subdirectory of --csv (based on the timestamp of the main batch file) so the main batch file is separate from the plugin related details
+
+2021-02-15
+Registry Explorer: 10 or so new plugins!!
+SQLECmd: Nuget updates, fix example referencing wrong program
+
+2021-02-13
+TimeApp: IP addresses use async, move IPs to own tab. Tighten up layout
+
+2021-02-12
+TimeApp: add ipv6, countdown and stopwatch
+
+2021-02-11
+SQLECmd: updated maps
+
+2021-02-04
+Timeline Explorer: CSV parser fix upstream
+EvtxeCmd: Now that Csv parser is fixed, go back to json payload as its more descriptive
+
+2021-02-03
+RECmd: Add --sync switch to auto update batch files from Github repo
+
+2021-02-02
+EvtxECmd: Replace json payload with plain text as it greatly shrinks the file sizes of the CSVs while retaining all the searchable data. If more details are needed, dump to XML and look at relevant record.
+TLE: EvtxECmd plugin adjust for EvtxECmd
+
+2021-02-01
+RECmd: Add --jsonf
+TLE: EvtxECmd plugin header fix
+
+2021-01-28
+RECmd: More binary converter options (Epoch, Sid)
+
+2021-01-26
+EvtxECmd: Create Maps dir if its missing, nuget
+
+2021-01-25
+Registry Explorer: Nuget/controls, updated network plugin
+ShellBags Explorer: Nuget/controls, fix for Has Explored in grid
+
+2021-01-20
+MFTECmd: Nuget updates, add --fl switch for condensed file listing
+Timeline Explorer: Update EZTools plugin for MFTECmd --fl file
+
+2021-01-19
+JumpListExplorer: nuget and controls
+JLECmd: Nuget updates
+
+2021-01-17
+ReCmd: nuget, utf8 encoding for plugin csv
+
+2021-01-12
+PECmd: Read only file fix
+EvtxECmd: Update maps
+
+2021-01-11
+Registry Explorer: Add TaskCache plugin
+
+2021-01-07
+PECmd: Nuget updates, use FIPS compliant SHA-1. no version bump
+
+2021-01-05
+Registry Explorer: nuget, splash screen fix
+
+2021-01-01
+SrumECmd: Handle dupe key issue between energy usage and LT table
+
+2020-12-30
+SrumECmd: Initial release
+
+2020-12-28
+TLE: Plugin tweaks, support a new EZTool, fix issue accessing plugin menu more than once, nuget
+
+2020-12-21
+EvtxECmd: Updated maps, make Provider mandatory, rename maps for more consistency, nuget
+
+2020-12-17
+TLE: Add Excel support back so xlsx and xls files open in TLE vs showing crazy stuff
+
+2020-12-13
+WxTCmd: Tons of cleanup and new stuff from json. More consistent between data from two primary tables, new fields including timezone, etc. Nuget updates, etc
+Timeline Explorer: Nuget, controls, all viewers are now in plugins vs built-in. This means anyone can add new supported types. Added View | Messages window, added Debug option when parsing, added View | Plugins, lots of other polish. Note that Layout names have changed!
+
+2020-12-11
+AmcacheParser: Handle a few more value names, nuget (no version bump)
+
+2020-12-07
+LECmd: Nuget updates, handle long file paths, ignore 0 byte files
+
+2020-11-30
+XWFIM: Version 2.0! Nuget and control updates, plus drop tooltips.txt in XWF folder if it does not exist
+
+2020-11-25
+EvtxECmd: Nuget updates, updated maps. Change to read entire XML string vs just the EventData|UserData. Allows for more flexibility in maps. Nothing needs to change with any maps!
+
+2020-11-20
+Registry Explorer: Nuget updates, improvements to Registry parser, plugin updates. 3rd party control updates
+
+2020-11-16
+Timeline Explorer: Add Copy on right click to Options, add Kape Triage timeline support, nuget
+
+2020-11-13
+Timeline Explorer: fix read only Datetime format, remove options menu from Tools, pull out copy header to main Tools menu
+
+2020-11-09
+MFTECmd: Make Bodyfile UTF-8
+
+2020-11-06
+Timeline Explorer: Fix copy cells to clipboard and honoring Copy Column header
+
+2020-11-05
+Timeline Explorer: Hide Find form vs closing it to prevent error on reopening
+
+2020-11-04
+Timeline Explorer: Fix more plaso related issues...
+
+2020-10-31
+Timeline Explorer: Added global find for all supported file types via Tools menu or CTRL-F, added a bunch of shortcuts to Tools menu, added new shortcut to select all values in current column, added open file count to bottom status bar
+
+2020-10-28
+Timeline Explorer: Control and nuget updates, double click active file to copy full path to clipboard
+
+2020-10-25
+Timeline Explorer: Remove filters for appcompatcache and evtxecmd in layout
+
+2020-10-13
+Timeline Explorer: Session files now remember each file's tagged rows between TLE runs
+
+2020-10-12
+Timeline Explorer: Update for new EvtxECmd map (added Keywords column)
+EvtxECmd: Add optional Provider and lookup tables (See System_1.map and System_42.map for examples)
+
+2020-10-08
+Timeline Explorer: Added new shortcut, CTRL-E, to clear all filters
+
+2020-10-05
+EvtxECmd: Republish after fixing regression with new DanderSpritz detection
+
+2020-10-01
+EvtxECmd: Nuget updates, updated maps, Added DanderSpritz hidden record detection. Try it with https://github.com/3gstudent/Eventlogedit-evtx--Evolution/blob/master/System2.evtx
+Timeline Explorer: Updated to handle new EvtxECmd CSV
+
+2020-09-09
+EvtxECmd: handle flush errors, nuget, updated maps
+
+2020-08-20
+Timeline Explorer: Tab management added
+Registry Explorer: Add TrustedDocs plugin
+
+2020-08-20
+Timeline Explorer: Updated controls, nuget. Handle invalid timestamps generated by Plaso...
+
+2020-07-23
+Registry Explorer: Updated controls and nuget and added Windows Product Key decoder to Data Interpreter
+
+2020-07-20
+TLE: Add CTRL-R shortcut for resize columns command
+
+2020-07-01
+TLE: Clean up TZWorks data...
+
+2020-06-25
+RECmd: Tweak batch mode to include key when it contained no values to ensure all timestamps are accounted for
+
+2020-06-17
+AppCompatCacheParser: Fix erroneous message about no logs and not being administrator (did not bump version #)
+
+2020-06-09
+JLECmd: Fix issue with extra \\ in UNC path for absolute path (no version # bump)
+Jumplist Explorer: Updated controls, fix extra \\ in UNC path. Smaller binary (no ver # change)
+Timeline Explorer: Updated controls (no ver # change)
+
+2020-05-12
+Registry Explorer: Fix label in prefs, fix issue with Available bookmarks font in tree, update controls
+
+2020-05-06
+bstrings: Fix examples missing a dash, updated nuget
+Timeline Explorer: Fix issue with header for SBECmd detection, updated controls
+
+2020-05-01
+XWFIM: Fix issue with binary path in BYOD lnk file
+
+2020-04-17
+ShellBags Explorer: Populate ‘HasExplored’ in SBECmd output
+LECmd: Fix HTML missing labels, update css, change target accessed to accessed (vs mod)
+JLECmd: Fix css issues
+
+2020-04-16
+JLECmd: Do not favor 32-bit process, nuget (smaller binary!)
+LECmd: Do not favor 32-bit process, nuget (smaller binary!)
+MFTECmd: nuget (smaller binary!)
+
+2020-04-14
+AmcacheParser: Sign binary
+
+2020-04-02
+Hasher: Updated controls
+
+2020-03-02
+MFTECmd: Remove extra tab char in last accessed timestamp
+JLECmd: Remove comma in MRU value when >= 1000
+
+2020-02-20
+Get-ZimmermanTools.ps1: Update signing cert
+
+2020-02-06
+
+Everything has been updated (more or less) for signing with a new code certificate
+
+Timeline Explorer: Updated controls and bump version to 1.0!
+ShellBags Explorer: Updated nuget and 3rd party controls, several new GUIDs
+bstrings: Nuget updates
+AmcacheParser: nuget updates, handle additional value names
+AppCompatCacheParser: Nuget updates
+EZViewer: Nuget and 3rd party controls
+EvtxECmd: Nuget updates, updated and new maps
+Hasher: Nuget and 3rd party controls
+JleCmd: Nuget updates
+JumpList Explorer: Nuget and 3rd party controls
+JleCmd: Nuget updates
+MfteCmd: Nuget updates
+MFTExplorer: Nuget and 3rd party controls
+PECmd: Nuget updates
+RBCmd: Nuget updates
+RecentFileCacheParser: Nuget updates
+SDBExplorer: Nuget and 3rd party controls
+VSCMount: Nuget updates
+WxTCmd: Nuget updates
+RegistryExplorer: Nuget and 3rd party controls
+
+2020-01-23
+AppCompatParser: Move debug option from -d to --debug to be consistent with other tools
+
+2020-01-13
+WxTCmd: Add support for ActivityOperations table
+
+2020-01-08
+Registry Explorer: Updated controls, new plugin, nuget, and some fixes for fringe issues
+
+2020-01-07
+bstrings: Nuget updates, new code signing cert
+
+2020-01-06
+MFTECmd: Handle zero length SACL in $SDS file
+Timeline Explorer: Add new SigCheck related file for Troy Larson
+
+2019-12-16
+Hasher: Allow window to be smaller, updated controls and nuget
+
+2019-11-22
+AmcacheParser: Fix issue reading amcache.hve on a live system (buffer too small error)
+AppCompatCacheParser: Nuget updates
+RegistryExplorer: Fix very rare bug related to value slack search when looking at free vk records
+
+2019-11-21
+PECmd: Fix issue with css for HTML report with mislabeled Volume timestamp
+
+2019-11-20
+Timeline Explorer: Read unsupported files fully on opening to prevent error when closing tab
+
+2019-11-18
+Timeline Explorer: Always use comma separator in unknown CSVs
+
+2019-11-12
+Timeline Explorer: Nicer looking filter criteria
+
+2019-11-05
+Registry Explorer: Fix context menu to copy key name to clipboard
+Timeline Explorer: Better json formatting in MiniView, add ability to adjust font size in MiniView per dfirfpi
+
+2019-11-01
+Registry Explorer: Minor visual tweaks
+
+2019-10-31
+Registry Explorer: Fix issue showing Tech details from available bookmarks, BOLD the selected key in available bookmarks
+
+2019-10-30
+EvtxECmd: Updated maps to most recent versions
+
+2019-10-29
+Timeline Explorer: Updated controls to allow for sorting by group summary, improved utilization of space when using Find, nuget updates, and Miniview format option improvements
+
+2019-10-28
+Registry Explorer: Fix issue showing deleted values in some cases, nuget and 3rd party control updates
+LECmd: Add support for shellitem type 0x22
+
+2019-10-19
+MFTECmd: SDS parsing fix when lots of empty pages exist
+
+2019-10-18
+JumpList Explorer: Display summary of jump list for automatic destinations in the main grid when root item is selected
+
+2019-10-15
+TLE: Prevent crash when trying to tag non-supported files (i.e. no Tag or Line # column)
+JLECmd: Change labels for Automatic destinations properties to reflect 'DestList Created on' and 'DestList Modified on' so people do not thing these timestamps are target file related
+
+2019-10-08
+TLE: Tweak drag and drop
+
+2019-10-07
+TLE: Handle updated $J format (source file column)
+
+2019-10-04
+RECmd: Add IncludeBinary and BinaryConvert options to batch mode. See example for how to use
+Get-ZimmermanTools: Do not mark file as updated in CSV if file is in use
+
+2019-10-03
+bstrings: Add another Dashcoin regex
+
+2019-10-01
+AppCompatCacheParser: Add source file and duplicate columns to output
+TLE: Handle updated AppCompat format
+
+2019-10-01
+RECmd: Add --sa switch to search for everything at once
+
+2019-09-30
+TLE: Handle updated autorunsc output
+
+2019-09-26
+JumpList Explorer/JLECmd: Handle case where a destlist does not have a lnk file
+TLE: Add ability to open a directory from Open with like you can do with a file, add ability to view raw and formatted messages in Details view for supertimeline
+
+2019-09-20
+TImeline Explorer: Fix for random \n issues
+
+2019-09-18
+Registry Explorer: Display RegFileTime values in UTC vs local time in values grid
+
+2019-09-17
+JLECmd: Add interaction count to destlist section/csv, nuget and control updates
+JumpList Explorer: Add interaction count to destlist section, nuget and control updates
+Timeline Explorer: handle new jumplist format with interaction count, nuget updates
+Registry Explorer/RECmd: Added MountedDevices plugin, fix fringe issue finding root key
+
+2019-09-05
+Registry Explorer: Add ability to open live system hives (when running as admin), general tweaks and cleanup, added rla.exe
+
+2019-09-04
+PECmd: Work around more FTK Imager stupidity with mounted images, nuget updates
+
+2019-09-03
+AmcacheParser: Nuget updates, pull in last write timestamps from subkeys vs parent key for a few of the new format data sets
+EZViewer: Updated controls, nuget
+
+2019-08-29
+MFTECmd: Updated nuget and use ads attribue id vs inheriting primary $DATA id in inode column when generating body file
+
+2019-08-28
+XWFIM: Handle renaming of BYOD executables, control updates
+
+2019-08-26
+EvtxECmd: Handle possible issue with relative paths on command line, nuget updates
+
+2019-08-21
+Get-ZimmermanTools: Add proxy support via PR
+
+2019-08-19
+Get-ZimmermanTools: Honor $dest for everything, not just the CSV!
+
+2019-08-17
+AppCompatCacheParser: Resolve full path to hive before processing logs when no relative or absolute path is provided, nuget updates
+
+2019-08-12
+RECmd: Fix missing nuget package for .net core build
+
+2019-08-10
+PECmd: Secondary check a pf file still exists (after it was initially found) before opening it
+
+2019-08-08
+MFTExplorer: Added
+
+2019-08-06
+Registry Explorer: Allow changing font size via Preferences. Changes take effect on restarting Registry Explorer, nuget updates and control updates
+EvtxECmd: Update included Maps
+
+2019-08-03
+EvtxECmd: Handle edge case where event payload has a non-standard name
+
+2019-07-31
+EZViewer: Add support for pictures (jpg, png, bmp, etc)
+
+2019-07-30
+Registry Explorer: Show all unassociated deleted values in their own group "Unassociated deleted values". This contains all values that could not be associated back to a key. Also added 'export bytes to file' in hex viewer, add double clicking 'Selected bytes' to enter number of bytes to select. This version also contains fixes when holding SHIFT when loading hives for auto LOG replay
+
+2019-07-16
+PECmd: Handle newer windows 10 format more reliably
+
+2019-07-12
+RECmd: Add/update 3 batch mode files from Troy Larson for RECmd
+
+2019-07-06
+Timeline Explorer: Convert \n to a real line feed in l2t csv file
+
+2019-07-03
+MFTECmd: Handle all bad timestamps and add two new extended attributes
+
+2019-07-01
+MFTECmd: Handling bad RecordModifiedOn timestamp value in free FILE record
+
+2019-06-30
+Get-ZimmermanTools: Formatting, fix for running on PS core on mac
+
+2019-06-26
+iisGeolocate: Pretty much complete rewrite to handle data better, especially if fields contain spaces
+
+2019-06-24
+EvtxECmd: Updated maps, added --sync command, SIGNIFICANT reduction in memory usage
+Get-ZimmermanTools: Remove dependency on 7-Zip
+EZViewer: Updated controls and nuget
+Hasher: Updated controls and nuget
+JumpList Explorer: Updated controls and nuget
+ShellBags Explorer: Updated controls and nuget
+SDB Explorer: Updated controls and nuget
+Timeline Explorer: Updated controls and nuget
+WxTCmd: Fix tsv extension for one of the output files, updated controls and nuget
+Timeline Explorer: Fix issue loading WxTCmd Activity_PackageIDs csv
+
+2019-06-21
+PECmd: Handle issue where detected ADS is not a prefetch file
+TLE: Detect CSVs from RECmd batch mode
+
+2019-06-20
+RECmd: Fix missing dependency for extensionblocks for some plugins
+Registry Explorer: Update checksum in addition to sequence number when replaying transaction logs
+
+2019-06-17
+PECmd: ISO8601 timestamps when exporting to json
+
+2019-06-12
+EvtxECmd: 9 new maps from Troy Larson for Microsoft-Windows-Shell-Core_Operational log
+RECmd: Updated batch file from Troy Larson
+
+2019-06-11
+EvtxECmd: Update Microsoft-Windows-TerminalServices-RemoteConnectionManager_Operational_1149.map to find properties in elements vs attributes
+
+2019-06-10
+EvtxECmd: Add 16 new maps, add auto detection and reporting when the timestamp is observed going backwards
+Timeline Explorer: Add 'Format' button to cell details view (double click a cell to show all contents in a dedicated window). Format currently supports JSON data (useful when looking at EvtxECmd output)
+Registry Explorer: Updated plugin for Terminal Services and BAM/DAM, add Unload project option, updated controls and nuget
+
+2019-06-01
+Timeline Explorer: Fix replacing \n in certain cases
+
+2019-05-31
+MFTECmd: When using --do, verify --dd is set
+
+2019-05-30
+Get-ZimmermanTools: Update to show progress of overall downloads
+
+2019-05-27
+PECmd: Open files as read only
+MFTECmd: SDS fix for 0 size records
+EvtxECmd: Add earliest and latest event date to metrics
+
+2019-05-27
+PECmd: Detect pf files in ADSs, warn and display them
+
+2019-05-24
+PECmd: Better json output, remove pretty switch, add jsonf switch, nuget update
+
+2019-05-20
+EZViewer: Updated controls
+LECmd: Set empty properties to null when generating json output
+
+2019-05-17
+LECmd: Add NetworkPath column to CSV and json output that pulls NetworkShareInfo.NetworkShareName out of the lnk file (if present)
+Timeline Explorer: Handle new column in LECmd
+RBCmd: Tweaked error handling when paths do not exist after searching
+VSCMount: Updated VSC discovery method, improved timestamp resolution, updated controls
+
+2019-05-16
+MFTECmd: Fix bodyfile output when using --bodyf
+
+2019-05-15
+JumpListExplorer: Control updates, add CTRL-R to Reload all jump lists
+
+2019-05-14
+MFTECmd: Fix for processing loose files when vss is not in use
+EvtxECmd: Add --vss switch that finds and extracts evtx from all available VSCs on drive letter specified by -f or -d. Note the same path is used when looking in VSCs. Also added --dedupe which is ON by default
+RECmd: Add --vss switch that finds and extracts Registry hives from all available VSCs on drive letter specified by -f or -d. Note the same path is used when looking in VSCs. Also added --dedupe which is ON by default
+PECmd: Add --vss switch that finds and extracts prefetch hives from all available VSCs on drive letter specified by -f or -d. Note the same path is used when looking in VSCs. Also added --dedupe which is ON by default
+
+
+2019-05-13
+MFTECmd: Add --vss switch that finds and extracts data from all available VSCs on drive letter specified by -f. Also added --dedupe which is OFF by default
+
+2019-05-08
+EvtxECmd: Added --sd and --ed for timestamp filtering. use the same format to pass in strings as --dt
+
+2019-05-06
+Timeline Explorer: Handle Payload column in EvtxECmd CSV output
+
+2019-05-04
+RECmd: Honor datetime format when saving out plugin details in batch mode
+
+2019-05-03
+EvtxECmd: Add --pj switch to include event payload (only the payload) as json in CSV export. it is ON by default.
+
+2019-05-01
+LECmd: Better json output, updated MAC vendor list, nuget
+MFTECmd: Better json output, nuget
+
+2019-04-30
+EvtxECmd: New maps
+
+2019-04-29
+EvtxECmd: For json, use ISO8601 format
+
+2019-04-28
+SBE: Fix SBECmd not liking relative paths in some cases, updated controls
+
+2019-04-27
+Timeline Explorer: More screen real estate, more search options, consolidated search interface, support for EvtxECmd CSV output
+
+2019-04-26
+EvtxECmd: Added maps, make timestamp in CSV show up with full sub-second precision
+
+2019-04-26
+EvtxECmd: Beta release
+
+2019-04-10
+MFTECmd: Handle case where --csv .\foo is used vs using full path
+
+2019-04-02
+Registry Explorer: New plugin for Taskband, updated controls
+
+2019-03-28
+LECmd, JLECmd, JumpList Explorer: Updated Property store GUID/ID pairings (thanks David Via!), improved Guid to folder lookups, nuget updates
+
+2019-03-27
+AmcacheParser: fix issue with Shortcuts key in new format when value is missing, nuget updates, add --debug and --trace switches
+
+2019-03-24
+MFTECmd: Swap out --vl switch for --debug and --trace, fix for rare issue when reading USN to find starting point where the data actually starts
+
+2019-03-18
+MFTECmd: Fix issue with --de complaining about destination path
+
+2019-03-16
+Registry Explorer: Updated controls, more batch mode examples for RECmd
+Get-ZimmermanTools.ps1: Add missing period
+
+2019-03-15
+ShellBags Explorer: Fix issue with csv exports, updated controls, new guids
+
+2019-03-04
+MFTECmd: Handle case where a file with same name as directory being created already exists
+bstrings: Add crypto wallet regex patterns
+
+2019-03-13
+PECmd: Add initial support for new Windows 10 prefetch format
+AppCompatCacheParser: Handle locked files to include LOG files
+AmcacheParser: More properties from different keys
+
+2019-03-11
+MFTECmd: Verify drive letter exists for --csv, --json, etc before running. Show more details about MFT processed (FILE record count, size) when running
+
+2019-03-09
+MFTECmd: MUCH improved handling of giant files, locked or otherwise
+
+2019-03-08
+Timeline Explorer: In FLS timelines, treat the meta column as a number for sorting purposes
+bstrings: Handle \ at end of -o as it expects a FILE, not a directory
+
+2019-03-06
+EZViewer: Fix issue with not showing PDFs
+
+2019-03-04
+MFTECmd: Handle missing time in extended EA
+
+2019-03-03
+EZViewer:Add Extensions.yaml which lets end user control which extenions get opened by which viewer.
+
+2019-02-28
+Get-ZimmermanTools.ps1: Add -UseBasicParsing to all Invoke-WebRequest calls
+RegistryExplorer: RECmd batch mode matching rewritten. Much faster and more accurate. GUI tweaks in Registry Explorer
+MFTECmd: Dependencies and handle some input errors
+ShellBags Explorer: control update, nuget, some new GUIDs
+bstrings: Tweak input validation
+
+2019-02-26
+SBDExplorer: Updated controls, File | Open set to CTRL-o
+Timeline Explorer: File | Open set to CTRL-o, Add Option to tontrol if headers are copied to clipboard on CTRL-C (See Tools menu)
+Registry Explorer: File | Open set to CTRL-o
+ShellBags Explorer: File | Open set to CTRL-o
+JumpList Explorer: File | Open set to CTRL-o
+EZViewer: File | Open set to CTRL-o
+
+2019-02-23
+LECmd: Update shell item
+Registry Explorer: Show RegMultiSz values split up, one string on a line, vs all on one
+Jumplist Explorer: Lnk dependency bump
+JLECmd: Lnk dependency bump
+
+2019-02-21
+bstrings: relative path tweak, nuget, and fody
+EZViewer: Fix issue creating context menus in Explorer
+
+2019-02-19
+AmcacheParser: Handle more value names, clean up errors with free records
+
+2019-02-18
+- PECmd: Recursive search fixes for permission issues.
+
+2019-02-15
+- RECmd: Use case-insensitive comparisons in batch mode
+
+2019-02-09
+- Timeline Explorer: Update to handle ($&*#^*&^%%$ column header changes in pescan, nuget updates
+
+2019-02-06
+- EZViewer: Allow resizeing rows and columns in spreadsheets
+
+2019-02-06
+- EZViewer: Add options to add/remove context menu "Open with EZViewer" entry
+
+2019-02-06
+- EZViewer: Add Hex view that allows you to see the loaded file in a hex viewer. Use button in lower right to load.
+
+2019-02-05
+- EZViewer: INITIAL RELEASE!! Standalone, zero dependency viewer for .doc, .docx, .xls, .xlsx, .txt, .log, .rtf, .otd, .htm, .html, .mht, .csv, and .pdf. Any non-supported files are shown in a hex editor (with data interpreter!)
+
+2019-02-04
+- LECmd: Update to handle MTP devices better
+- JLECmd: : Update to handle lnk files for MTP devices better. nuget updates
+- Jumplist Explorer: : Update to handle lnk files for MTP devices better, nuget, 3rd party controls
+
+2019-01-29
+- MFTECmd: add jsonf and nuget
+
+2019-01-28
+- AppCompatCacheParser, AmcacheParser: nuget updates
+- MFTECmd: Add --fls option (used in conjuction with --de) and 5 extended attributes decoded
+- LECmd: Better recursive searching when using -d option (faster, ignore reparse points, etc) and nuget updates
+- JLECmd: Better recursive searching when using -d option (faster, ignore reparse points, etc) and nuget updates
+
+2019-01-25
+- AppCompatCacheParser: Fix bug related to reading offline hive on SAMBA share
+
+2019-01-24
+- Registry Explorer: Fix bug when opening offline hives and not prompting for LOG files
+- RBCmd: When a directory is deleted, show all child files in output vs just top level directory
