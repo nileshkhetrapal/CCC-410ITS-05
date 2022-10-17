@@ -5,13 +5,18 @@
 #The script will use the CP-APR algorithm to find the most anomalous log.
 
 import argparse
-import pyCP_APR
+from pyCP_APR import pyCP_APR
 import pandas as pd
 import csv
 import re
-#import tensorflow as tf
+import tensorflow
 import numpy as np
 from collections import Counter
+import base64
+import scipy.io as spio
+
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 def main():
     parser = argparse.ArgumentParser(description='Finds the weirdest log in the file')
@@ -43,24 +48,38 @@ def main():
         #read_file = pd.read_csv ([print(line) for line in lines])
 
         #Convert the CSV file's values to Numbers
-        df = pd.read_csv('ex1.csv', sep='delimiter', header=None, on_bad_lines='skip')
-        df = df.apply(pd.to_numeric, errors='ignore')
-        df.to_csv('ex1.csv', index=False)
-        print(df)
-        print(df.to_numpy())
-        #Encoding the data:
-        # using dict comp (finally lol) 30% faster
+        num_words = 10000
+        tokenizer = Tokenizer(num_words=num_words, oov_token="<OOV>")
+        tokenizer.fit_on_texts(lines)
+        x_train = tokenizer.texts_to_sequences(lines)
+        bruh = np.array(x_train)
+        print(bruh)
 
+        #Padding and Truncating the data
+        #The length of the logs needs to be the same for the algorithm to work
+        #The algorithm will truncate the logs that are longer than the max length
+        #The algorithm will pad the logs that are shorter than the max length
+        #The max length is the average length of the logs + 2 standard deviations
+        max_length = int(np.mean([len(x) for x in x_train]) + 2*np.std([len(x) for x in x_train]))
+        x_train = pad_sequences(x_train, maxlen=max_length, padding='post', truncating='post')
+        breauh = np.array(x_train)
+        print(breauh)
 
+        #Convert the numpy array to a tensor
+        tensor = tensorflow.convert_to_tensor(x_train, dtype=tensorflow.int32)
+        print(tensor)
 
-        #
-        tensor1 = tf.convert_to_tensor(df.to_numpy())
-        print(tensor1)
-        #new_dict = {}
-        #df = pd.DataFrame(logCsv)
-        #print(df)
-        #tensors = [pyCP_APR.Tensor(line) for line in lines]
-        #print(tensors)
+        #Run the CP-APR algorithm on the tensor
+        #The CP-APR algorithm will return the most anomalous log
+        #The CP-APR algorithm will return the index of the most anomalous log
+        
+        model = pyCP_APR.CP_APR(n_iter=100, verbose=10, method='torch', device='cpu')
+        result = model.fit(coords=x_train, values = np.ones(x_train.shape[0]))
+        print(result)
+        #model.fit(tensor)
+        #print(model.anomaly_score())
+        #print(model.anomaly_index())
+
 main()
 
 def get_num_occurances(data_dict, target):
