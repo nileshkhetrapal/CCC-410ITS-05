@@ -32,11 +32,9 @@ def run_anomaly_detection():
         anomaly_dict[line] = 0
     #Run anomaly_detection.exe with the -a flag and the input file piped in.
     #The Parse the output and identify the anomaly score of the lines and sort them by the anomaly score
-    print("Running anomaly_detection.exe with the default parameters...")
     #print(args.input)
     #os.system("C:\\Users\\nilesh\\Documents\\Capstone\\Test\\anomaly_detection.exe" + args.input + " -a")
     output = os.popen("C:\\Users\\" + username + "\\AppData\\Local\\Temp\\anomaly_detection.exe " + args.input + " -a").read()
-    print("Done.")
     #Take anomaly scores and put them in the dictionary with their corresponding Line_Number
     for line in output.splitlines():
         line = line.split(':')
@@ -56,13 +54,11 @@ def main():
     args = parser.parse_args()
     #Check if the input file exists
     if os.path.isfile(args.input):
-        print("Input file exists.")
         #Check if the input file is empty
         if os.stat(args.input).st_size == 0:
             print("Input file is empty.")
             sys.exit()
         else:
-            print("Input file is not empty.")
             run_anomaly_detection()
     else:
         print("Input file does not exist.")
