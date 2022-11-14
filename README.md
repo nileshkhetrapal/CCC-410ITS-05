@@ -11,6 +11,9 @@ The project just got its first release. To use it is simple
 
 python3 .\WinPyULAD.py -i sample.txt
 
+![ezgif-3-d03eaa8b78](https://user-images.githubusercontent.com/71113185/201583243-75494769-77d0-4b55-849b-b4cb6a1c988c.gif)
+
+
 ## The next steps for the project
 
 The next steps for the project include creating a very basic test dataset, along with using more algorithms for testing their accuracy.
